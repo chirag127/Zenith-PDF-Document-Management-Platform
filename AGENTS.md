@@ -32,11 +32,10 @@
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
 **Directives:** Detect the project type (`package.json`, `Cargo.toml`, `pyproject.toml`) and apply the corresponding **Apex Toolchain**.
-* **SCENARIO A: WEB / APP / EXTENSION (TypeScript)**
-    * **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Rolldown), **Tauri v2.x** (Native).
+* **SCENARIO A: WEB / APP / GUI (TypeScript)**
+    * **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Build Tool), **TailwindCSS v4.x** (Styling), **Tauri v2.x** (Desktop App Framework).
     * **State:** **Signals** (Standardized).
-    * **UI Framework:** TailwindCSS v4
-    * **Lint/Test:** **Biome** (Speed) + **Vitest** (Unit) + **Playwright** (E2E).
+    * **Lint/Test:** **Biome** (Formatter/Linter) + **Vitest** (Unit/Integration) + **Playwright** (E2E).
 * **SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go)**
     * **Stack:** **Rust 1.8x** (Cargo) or **Go 1.2x**.
     * **Lint:** **Clippy** / **GolangCI-Lint**.
