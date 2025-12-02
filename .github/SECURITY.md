@@ -1,70 +1,34 @@
-# 🛡️ Zenith PDF Document Management Platform Security Policy
+# Security Policy
 
-Zenith PDF is committed to maintaining the highest level of security for our users. Given our architecture (Tauri/Client-Side), security efforts focus heavily on preventing supply chain attacks, minimizing system access, and isolating potential vulnerabilities in the underlying Rust core.
+## Supported Versions
 
-We appreciate the efforts of security researchers and the community in helping us achieve a **Zero-Defect** standard. This document outlines the process for reporting vulnerabilities and our commitment to responsible disclosure.
+We are committed to maintaining the security of our users and their data. We will provide security updates for the latest stable version of **ZenithPDF-Document-Management-Desktop-App**. Older versions are not actively supported and may not receive security patches.
 
-## 1. 🚨 Reporting a Vulnerability
+## Reporting a Vulnerability
 
-If you discover a security vulnerability in Zenith PDF, please report it immediately and responsibly.
+We take all security vulnerabilities seriously. If you discover a security issue in **ZenithPDF-Document-Management-Desktop-App**, please report it to us immediately. We will acknowledge your report within 48 hours.
 
-### Preferred Method
+**Please do not disclose the vulnerability publicly until it has been addressed.**
 
-**DO NOT** open a public GitHub issue. Please report vulnerabilities privately via email to our dedicated Security Team:
+To report a vulnerability, please send an email to:
 
-📧 **security@zenith-pdf.io** (Placeholder)
+*   `chirag.m.pathak@gmail.com` (Primary Contact)
 
-We encourage encrypting your submission using our official PGP key (available upon request or listed in the repository settings).
+When reporting, please provide as much detail as possible, including:
 
-### Information Required
+*   A clear description of the vulnerability.
+*   The steps to reproduce the issue.
+*   The affected version(s) of the software.
+*   Any relevant logs, screenshots, or proof-of-concept code.
 
-To help us triage and resolve the issue quickly, please include:
+We will work diligently to assess the report, develop a fix, and release a patch as soon as possible. We will also credit reporters for significant vulnerabilities.
 
-1.  **A detailed description** of the vulnerability and its potential impact.
-2.  **Steps to reproduce** the issue (including configuration details).
-3.  The **affected version(s)** of Zenith PDF (e.g., `v1.2.0`).
-4.  Any **proof-of-concept** code or scripts.
-5.  Your name and affiliation (if desired) for proper credit.
+## Security Best Practices
 
----
+*   **Desktop Application Security:** As this is a desktop application built with Tauri, ensure you are downloading releases only from the official GitHub repository (`https://github.com/chirag127/ZenithPDF-Document-Management-Desktop-App`) to avoid tampered versions.
+*   **Client-Side Operations:** Most document processing occurs client-side, minimizing the risk of server-side data breaches. However, always be mindful of the sensitivity of the documents you are handling.
+*   **TypeScript & Vite Security:** We adhere to strict TypeScript configurations and use Vite's build optimizations. Ensure you always update to the latest patch versions of these dependencies and follow their respective security guidelines.
+*   **Dependency Management:** Regularly update your local dependencies using `uv` (or your preferred package manager) to include the latest security patches for all libraries.
+*   **Code Review:** All code contributions are subject to a rigorous review process, with a strong emphasis on security implications.
 
-## 2. ⏱️ Our Security Response Timeline (SLA)
-
-We use the Common Vulnerability Scoring System (CVSS v3.1) to prioritize and rate vulnerabilities. Our commitment to response is as follows:
-
-| Severity (CVSS) | Initial Acknowledgment | Triage & Assessment | Resolution Target |
-| :--- | :--- | :--- | :--- |
-| **Critical** (9.0–10.0) | < 2 Hours | < 24 Hours | < 7 Days |
-| **High** (7.0–8.9) | < 4 Hours | < 48 Hours | < 14 Days |
-| **Medium** (4.0–6.9) | < 1 Business Day | < 7 Days | < 30 Days |
-| **Low** (0.1–3.9) | < 2 Business Days | < 14 Days | Next Scheduled Release |
-
-*Note: Resolution targets depend on the complexity of the fix and required regression testing.*
-
-## 3. 🔐 Development Security Principles (DevSecOps Protocol)
-
-As dictated by the **Apex Technical Authority**, all development adheres to strict security protocols:
-
-1.  **Zero Trust Architecture:** All inputs, whether from the local filesystem or the network, are treated as hostile and must be fully sanitized before processing.
-2.  **Supply Chain Integrity:** We enforce automated dependency audits (`npm audit`, `cargo audit`) and generate **Software Bill of Materials (SBOMs)** for every release to ensure library provenance.
-3.  **Tauri Isolation:** Strict configuration of the Tauri API to expose only minimal, necessary functionality to the webview, preventing OS-level escape vectors.
-4.  **Client-Side Data Mandate:** Sensitive PDF data processing and storage are kept strictly client-side whenever possible, minimizing server risk (where applicable).
-5.  **Principle of Least Privilege:** Components only access resources necessary for their specific function (DIP/ISP adherence).
-
-## 4. ⚙️ Supported Versions
-
-We prioritize security patches for the latest stable release and the previous minor release branch.
-
-| Version | Supported | Notes |
-| :--- | :--- | :--- |
-| **Latest Stable (e.g., v2.x)** | ✅ Yes | Receives immediate critical and high-priority fixes. |
-| **Previous Minor (e.g., v1.x)** | ⚠️ Limited | Only receives critical security fixes for 6 months after the latest stable release. |
-| **Older Versions** | ❌ No | Users must upgrade to receive support. |
-
-We highly recommend always using the latest version of Zenith PDF to benefit from the newest security enhancements and bug fixes.
-
----
-
-## 5. Thank You
-
-We extend our sincere gratitude to all individuals who contribute to the security of the Zenith PDF platform through responsible disclosure.
+Thank you for helping us keep **ZenithPDF-Document-Management-Desktop-App** secure!
